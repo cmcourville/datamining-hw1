@@ -12,18 +12,18 @@
 #--------------------------
 def Terms_and_Conditions():
     ''' 
-        By submitting this homework or changing this function, you agree with the following terms:
-       (1) Not sharing your code/solution with any student before and after the homework due. For example, sending your code segment to another student, putting your solution online or lending your laptop (if your laptop contains your solution or your Dropbox automatically copied your solution from your desktop computer and your laptop) to another student to work on this homework will violate this term.
-       (2) Not using anyone's code in this homework and building your own solution. For example, using some code segments from another student or online resources due to any reason (like too busy recently) will violate this term. Changing other's code as your solution (such as changing the variable names) will also violate this term.
-       (3) When discussing with any other student about this homework, only discuss high-level ideas or use pseudo-code. Don't discuss about the solution at the code level. For example, two students discuss about the solution of a function (which needs 5 lines of code to solve) and they then work on the solution "independently", however the code of the two solutions are exactly the same, or only with minor differences (variable names are different). In this case, the two students violate this term.
-      All violations of (1),(2) or (3) will be handled in accordance with the WPI Academic Honesty Policy.  For more details, please visit: https://www.wpi.edu/about/policies/academic-integrity/dishonesty
-      Note: we will use the Stanford Moss system to check your code for code similarity. https://theory.stanford.edu/~aiken/moss/
-      Historical Data: in one year, we ended up finding 25% of the students in that class violating this term in their homework submissions and we handled ALL of these violations according to the WPI Academic Honesty Policy. 
-      To avoid this from happening again, just in case if anyone is interested:), here is an article you could read: https://github.com/genchang1234/How-to-cheat-in-computer-science-101
+    By submitting this homework or changing this function, you agree with the following terms:
+        (1) Not sharing your code/solution with any student before and after the homework due. For example, sending your code segment to another student, putting your solution online or lending your laptop (if your laptop contains your solution or your Dropbox automatically copied your solution from your desktop computer and your laptop) to another student to work on this homework will violate this term.
+        (2) Not using anyone's code in this homework and building your own solution. For example, using some code segments from another student or online resources due to any reason (like too busy recently) will violate this term. Changing other's code as your solution (such as changing the variable names) will also violate this term.
+        (3) When discussing with any other student about this homework, only discuss high-level ideas or use pseudo-code. Don't discuss about the solution at the code level. For example, two students discuss about the solution of a function (which needs 5 lines of code to solve) and they then work on the solution "independently", however the code of the two solutions are exactly the same, or only with minor differences (variable names are different). In this case, the two students violate this term.
+    All violations of (1),(2) or (3) will be handled in accordance with the WPI Academic Honesty Policy.  For more details, please visit: https://www.wpi.edu/about/policies/academic-integrity/dishonesty
+    Note: we will use the Stanford Moss system to check your code for code similarity. https://theory.stanford.edu/~aiken/moss/
+    Historical Data: in one year, we ended up finding 25% of the students in that class violating this term in their homework submissions and we handled ALL of these violations according to the WPI Academic Honesty Policy. 
+    To avoid this from happening again, just in case if anyone is interested:), here is an article you could read: https://github.com/genchang1234/How-to-cheat-in-computer-science-101
     '''
     #*******************************************
     # CHANGE HERE
-    Read_and_Agree = False #if you have read and agree with the term above, change "False" to "True".
+    Read_and_Agree = True #if you have read and agree with the term above, change "False" to "True".
     #*******************************************
     return Read_and_Agree
 
@@ -41,8 +41,11 @@ def swap( A, i, j ):
     '''
     #########################################
     ## INSERT YOUR CODE HERE
-
-
+    m = A[i] 
+    n = A[j] 
+    A[i] = n
+    A[j] = m
+    return A 
 
     #########################################
 
@@ -56,7 +59,13 @@ def sort_list( A ):
     '''
     #########################################
     ## INSERT YOUR CODE HERE
-
+    for x in range(len(A) - 1, 0, -1):
+        for i in range(x):
+            if A[i] > A[i + 1]:
+                temp = A[i]
+                A[i] = A[i + 1]
+                A[i + 1] = temp
+    return A
 
 
 

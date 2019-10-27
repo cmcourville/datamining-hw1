@@ -25,7 +25,7 @@ def ndarray():
     '''
     #########################################
     ## INSERT YOUR CODE HERE
-
+    X = np.array([1,2,3],[4,5,6])
 
     #########################################
     return X
@@ -45,7 +45,7 @@ def float_array():
     '''
     #########################################
     ## INSERT YOUR CODE HERE
-
+    X = np.float_array([0.1,0.2,0.3],[0.4,0.5,0.6])
 
     #########################################
     return X
@@ -61,13 +61,15 @@ def get_shape(X):
         Input: 
                 X: a numpy matrix 
         Output: 
-                h: an integer, the hight of the matrix x (number of rows)
+                h: an integer, the height of the matrix x (number of rows)
                 w: an integer, the width of the matrix x (number of columns)
         Hint: you could solve this problem using one line of code, using a numpy function. 
     '''
     #########################################
     ## INSERT YOUR CODE HERE
-
+    shape = X.shape()
+    h = shape[1]
+    w = shape[2]
     #########################################
     return h, w 
 
@@ -87,7 +89,7 @@ def all_one_matrix(m,n):
     '''
     #########################################
     ## INSERT YOUR CODE HERE
-
+    X = np.ones(m,n)
 
     #########################################
     return X 
@@ -107,8 +109,8 @@ def mat_sum(X):
     '''
     #########################################
     ## INSERT YOUR CODE HERE
-
-
+    
+    
     #########################################
     return s
 
